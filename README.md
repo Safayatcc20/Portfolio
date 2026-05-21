@@ -5,7 +5,7 @@ This is my personal developer portfolio built to showcase my skills, projects, a
 ---
 
 ## ✨ Live Demo
-🌐 [Visit Portfolio]([https://your-live-link.com](https://portfolio-eta-ten-hf99mipj6k.vercel.app/))
+🌐 [Visit Portfolio](https://portfolio-eta-ten-hf99mipj6k.vercel.app/)
 
 ---
 
