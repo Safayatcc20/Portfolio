@@ -71,7 +71,7 @@ This is my personal developer portfolio built to showcase my skills, projects, a
 
 ## 📬 Contact
 
-- GitHub: https://github.com/safayatcc20  
+- GitHub: https://github.com/Safayatcc20  
 - Email: mdsafayatcc20@gmail.com  
 - Portfolio: https://portfolio-eta-ten-hf99mipj6k.vercel.app/  
 
