@@ -69,6 +69,6 @@ This is my personal developer portfolio built to showcase my skills, projects, a
 🌐 Multi-language support
 
 📬 Contact
-GitHub: https://github.com/your-username
-Email: your-email@example.com
-Portfolio: [https://your-live-link.com](https://portfolio-eta-ten-hf99mipj6k.vercel.app/)
+GitHub: https://github.com/safayatcc20
+Email: mdsafayatcc20@gmail.com
+Portfolio: https://portfolio-eta-ten-hf99mipj6k.vercel.app/
