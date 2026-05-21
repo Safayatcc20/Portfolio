@@ -32,9 +32,6 @@ This is my personal developer portfolio built to showcase my skills, projects, a
 
 ---
 
-
----
-
 ## 📸 Screenshots
 
 ### 🚀 Hero Section
@@ -62,13 +59,22 @@ This is my personal developer portfolio built to showcase my skills, projects, a
 ![Mobile View](./public/screenshots/08-mobile.png)
 
 ---
-🌟 Future Improvements
-🔗 Live API integration (Codeforces / LeetCode stats)
-📝 Blog section
-📊 CP analytics dashboard
-🌐 Multi-language support
 
-📬 Contact
-GitHub: https://github.com/safayatcc20
-Email: mdsafayatcc20@gmail.com
-Portfolio: https://portfolio-eta-ten-hf99mipj6k.vercel.app/
+## 🌟 Future Improvements
+
+- 🔗 Live API integration (Codeforces / LeetCode stats)  
+- 📝 Blog section  
+- 📊 CP analytics dashboard  
+- 🌐 Multi-language support  
+
+---
+
+## 📬 Contact
+
+- GitHub: https://github.com/safayatcc20  
+- Email: mdsafayatcc20@gmail.com  
+- Portfolio: https://portfolio-eta-ten-hf99mipj6k.vercel.app/  
+
+---
+
+⭐ If you like this project, consider giving it a star!
