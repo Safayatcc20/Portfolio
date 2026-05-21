@@ -1,14 +1,28 @@
-import {Button} from "@/components/Button"
-import {
-  ArrowRight,
-  Download,
-  X,      
-  ChevronDown,
-} from "lucide-react";
-import {AnimatedBorderButton} from "@/components/AnimatedBorderButton"
+import { Button } from "@/components/Button";
+import { ArrowRight, Download, X, ChevronDown } from "lucide-react";
+import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { GiThink } from "react-icons/gi";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
+
+const skills = [
+  "C++",
+  "C",
+  "OOP",
+  "Data Structures",
+  "Algorithms",
+  "SQL",
+  "MongoDB",
+  "React",
+  "JavaScript",
+  "Node.js",
+  "Express.js",
+  "Tailwind CSS",
+  "HTML",
+  "Machine Learning",
+  "Git",
+  "GitHub",
+];
 
 export const Hero = () => {
   return (
@@ -38,8 +52,8 @@ export const Hero = () => {
         ))}
       </div>
       {/* Content  */}
-      <div>
-        <div>
+      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left column - Text Content */}
           <div className="space-y-8">
             <div className="animate-fade-in">
@@ -51,24 +65,30 @@ export const Hero = () => {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Solving problems and Building {" "}
+                Turning ideas into{" "}
                 <span className="text-primary glow-text">modern web</span>
                 <br />
-                applications with
+                applications through
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  passion & precision.
+                  code & problem solving.
                 </span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+              <p className="text-lg leading-8 text-muted-foreground max-w-xl animate-fade-in animation-delay-200">
                 Assalamualikum, I'm Safayat, a final year CSE student at CUET
-                passionate about Full-Stack development, competitive
-                programming, and problem solving. I enjoy working with
-                algorithms, OOP, SQL, MongoDB, and modern web technologies while
-                continuously learning and building new projects.
+                passionate about
+                <span className="text-foreground font-medium">
+                  {" "}
+                  Full-Stack development, competitive programming,
+                </span>{" "}
+                and problem solving.
+                <br />
+                <br />I enjoy working with algorithms, databases, OOP, and
+                modern web technologies while continuously learning and building
+                new projects.
               </p>
             </div>
-             {/* CTAs */}
+            {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
               <Button size="lg">
                 Contact Me <ArrowRight className="w-5 h-5" />
@@ -83,7 +103,10 @@ export const Hero = () => {
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
                 { icon: BsGithub, href: "https://github.com/Safayatcc20" },
-                { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/md-safayat-bin-nasir/" },
+                {
+                  icon: FaLinkedinIn,
+                  href: "https://www.linkedin.com/in/md-safayat-bin-nasir/",
+                },
                 { icon: X, href: "https://x.com/md_bin94811" },
               ].map((social, idx) => (
                 <a
@@ -97,7 +120,79 @@ export const Hero = () => {
             </div>
           </div>
           {/* Right column - Profile Image */}
+          <div className="relatice animate-fade-in animation-delay-300">
+            {/* Profile Image */}
+            <div className="relative max-w-md mx-auto">
+              <div
+                className="absolute inset-0 
+              rounded-3xl bg-gradient-to-br 
+              from-primary/30 via-transparent 
+              to-primary/10 blur-2xl animate-pulse"
+              />
+              <div className="relative glass rounded-3xl p-2 glow-border">
+                <img
+                  src="\safayats.jpeg"
+                  alt="Md.Safayat Bin Nasir"
+                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                />
+
+                {/* Floating Badge */}
+                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-sm font-medium">
+                      Available for work
+                    </span>
+                  </div>
+                </div>
+                {/* Stats Badge */}
+                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                  <div className="text-3xl font-bold text-highlight">0</div>
+                  <div className="text-xl text-shadow-muted-foreground">
+                    Years Exp.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        {/* Skills Section */}
+        <div className="mt-20 animate-fade-in animation-delay-600">
+          <p className="text-3xl text-secondary-foreground mb-6 text-center">
+            Technologies I work with
+          </p>
+          <div className="relative overflow-hidden">
+            <div
+              className="absolute left-0 top-0 bottom-0 w-32
+             bg-gradient-to-r from-surface to-transparent z-10"
+            />
+            <div
+              className="absolute right-0 top-0 bottom-0 w-32
+             bg-gradient-to-l from-foreground to-transparent z-10"
+            />
+            <div className="flex animate-marquee">
+              {[...skills, ...skills].map((skill, idx) => (
+                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                  <span className="text-xl font-semibold text-foreground hover:text-highlight transition-colors">
+                    {skill}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 
+      animate-fade-in animation-delay-800"
+      >
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
       </div>
     </section>
   );
