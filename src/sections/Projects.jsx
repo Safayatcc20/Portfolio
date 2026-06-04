@@ -8,7 +8,7 @@ const projects = [
       "A responsive e-commerce web application featuring product listings, shopping cart functionality, and modern UI design using React and frontend development practices.",
     image: "/projects/ecommerce.png",
     tags: ["React", "JavaScript", "CSS"],
-    link: "#",
+    link: " https://simple-e-commerce-store-bzi6.vercel.app/",
     github: "https://github.com/Safayatcc20/Simple_E-commerce_Store",
   },
   {
@@ -17,7 +17,7 @@ const projects = [
       "A mental wellness web application designed to support users through interactive features and a clean user experience. Built while exploring modern frontend development concepts.",
     image: "/projects/mindbreath.png",
     tags: ["React", "JavaScript", "Tailwind CSS"],
-    link: "#",
+    link: "https://mind-breath-mental-wellness-app.vercel.app/",
     github: "https://github.com/Safayatcc20/MindBreath-Mental-Wellness-App",
   },
 
@@ -27,7 +27,7 @@ const projects = [
       "A food ordering web application with interactive UI components and responsive design, developed to practice modern web development workflows.",
     image: "/projects/foodapp.png",
     tags: ["React", "JavaScript", "Tailwind CSS"],
-    link: "#",
+    link: "https://food-ordering-aj43.vercel.app/",
     github: "https://github.com/Safayatcc20/Food_ordering",
   },
 
@@ -37,7 +37,7 @@ const projects = [
       "A simple web application that calculates a user's age based on their date of birth using JavaScript date handling and frontend logic.",
     image: "/projects/agecalculator.png",
     tags: ["HTML", "CSS", "JavaScript"],
-    link: "#",
+    link: "https://github.com/Safayatcc20/Age_Calculator_Using_Birthday",
     github: "https://github.com/Safayatcc20/Age_Calculator_Using_Birthday",
   },
 ];

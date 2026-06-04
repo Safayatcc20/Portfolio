@@ -4,6 +4,7 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { GiThink } from "react-icons/gi";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
+import { useEffect, useRef, useState } from "react";
 
 const skills = [
   "C++",
@@ -25,6 +26,20 @@ const skills = [
 ];
 
 export const Hero = () => {
+  const [resumeOpen, setResumeOpen] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) {
+        setResumeOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Bg */}
@@ -64,24 +79,21 @@ export const Hero = () => {
             </div>
             {/* Headline */}
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Turning ideas into{" "}
-                <span className="text-primary glow-text">modern web</span>
-                <br />
-                applications through
-                <br />
-                <span className="font-serif italic font-normal text-white">
-                  code & problem solving.
+              <h1 className="text-3xl md:text-3xl lg:text-3xl font-bold leading-tight animate-fade-in animation-delay-100">
+                CSE Student | MERN Stack Developer{" "}
+                <span className="text-primary glow-text">
+                  | Competitive Programmer
                 </span>
+                <br />
               </h1>
               <p className="text-lg leading-8 text-muted-foreground max-w-xl animate-fade-in animation-delay-200">
-                Assalamualikum, I'm Safayat, a final year CSE student at CUET
-                passionate about
+                I build responsive full-stack web applications using
                 <span className="text-foreground font-medium">
                   {" "}
-                  Full-Stack development, competitive programming,
+                  React, Node.js, and MongoDB
                 </span>{" "}
-                and problem solving.
+                while solving algorithmic problems through competitive
+                programming.
                 <br />
                 <br />I enjoy working with algorithms, databases, OOP, and
                 modern web technologies while continuously learning and building
@@ -89,18 +101,72 @@ export const Hero = () => {
               </p>
             </div>
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Download CV
-              </AnimatedBorderButton>
+            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300 relative z-[100] isolate">
+              {/* Contact */}
+              <a href="#contact">
+                <Button size="lg">
+                  Contact Me
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
+
+              {/* Resume Dropdown Wrapper */}
+              <div className="relative z-50">
+                {/* Resume Button */}
+                <button
+                  onClick={() => setResumeOpen(!resumeOpen)}
+                  className="focus:outline-none"
+                >
+                  <AnimatedBorderButton>
+                    <div className="flex items-center gap-2">
+                      <ChevronDown
+                        className="w-4 h-4 transition-transform duration-300
+            ${resumeOpen ? 'rotate-180' : ''}"
+                      />
+                      Resume
+                    </div>
+                  </AnimatedBorderButton>
+                </button>
+
+                {/* Dropdown */}
+                {resumeOpen && (
+                  <div
+                    className="absolute left-0 top-full mt-3 w-52
+           rounded-2xl glass shadow-2xl
+           overflow-hidden border border-border
+           z-[99999]"
+                  >
+                    {/* View */}
+                    <a
+                      href="/Md.Safayat_Bin_Nasir_Resume.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setResumeOpen(false)}
+                      className="flex items-center gap-3 px-4 py-3
+                     hover:bg-primary/10 transition-all"
+                    >
+                      👁 View Resume
+                    </a>
+
+                    {/* Download */}
+                    <a
+                      href="/Md.Safayat_Bin_Nasir_Resume.pdf"
+                      download="Md_Safayat_Bin_Nasir_Resume.pdf"
+                      onClick={() => setResumeOpen(false)}
+                      className="flex items-center gap-3 px-4 py-3
+                     hover:bg-primary/10 transition-all"
+                    >
+                      ⬇ Download Resume
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
             {/* Social Links */}
-            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-              <span className="text-sm text-muted-foreground">Follow me: </span>
+            <div className="flex items-center gap-4 animate-fade-in animation-delay-400 relative z-10">
+              <span className="text-2xl text-muted-foreground">
+                Follow me:{" "}
+              </span>
               {[
                 { icon: BsGithub, href: "https://github.com/Safayatcc20" },
                 {

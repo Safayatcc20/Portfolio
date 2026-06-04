@@ -11,6 +11,8 @@ import { Education } from "@/sections/Education";
 import { Skills } from "@/sections/Skills";
 import { Reveal } from "@/components/Reveal";
 import { CompetitiveProgramming } from "@/sections/CompetitiveProgramming";
+import { Analytics } from "@vercel/analytics/next";
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
       <main>
         <Reveal>
           <Hero />
+          <Analytics />
         </Reveal>
         <Reveal>
           <About />

@@ -6,10 +6,10 @@ export const skillGroups = [
     color: "#10b981",
     description: "Strong foundation in multiple languages with competitive programming expertise",
     skills: [
-      { name: "C++", level: 95, badge: "Advanced" },
-      { name: "JavaScript", level: 90, badge: "Advanced" },
-      { name: "Python", level: 85, badge: "Intermediate" },
-      { name: "C", level: 85, badge: "Intermediate" },
+      { name: "C++", level: 95 },
+      { name: "JavaScript", level: 90 },
+      { name: "Python", level: 85 },
+      { name: "C", level: 85 },
     ],
   },
   {
@@ -19,10 +19,10 @@ export const skillGroups = [
     color: "#3b82f6",
     description: "Modern React-based development with responsive, performant UIs",
     skills: [
-      { name: "React", level: 90, badge: "Advanced" },
-      { name: "Tailwind CSS", level: 90, badge: "Advanced" },
-      { name: "HTML & CSS", level: 95, badge: "Expert" },
-      { name: "Responsive Design", level: 88, badge: "Advanced" },
+      { name: "React", level: 90 },
+      { name: "Tailwind CSS", level: 90 },
+      { name: "HTML & CSS", level: 95 },
+      { name: "Responsive Design", level: 88 },
     ],
   },
   {
@@ -32,10 +32,10 @@ export const skillGroups = [
     color: "#f59e0b",
     description: "Full-stack capabilities with Node.js, Express, and database design",
     skills: [
-      { name: "Node.js", level: 85, badge: "Advanced" },
-      { name: "Express.js", level: 85, badge: "Advanced" },
-      { name: "Flask", level: 80, badge: "Intermediate" },
-      { name: "RESTful APIs", level: 88, badge: "Advanced" },
+      { name: "Node.js", level: 85 },
+      { name: "Express.js", level: 85 },
+      { name: "Flask", level: 80 },
+      { name: "RESTful APIs", level: 88 },
     ],
   },
   {
@@ -45,10 +45,10 @@ export const skillGroups = [
     color: "#8b5cf6",
     description: "Experience with relational and NoSQL databases at scale",
     skills: [
-      { name: "MongoDB", level: 85, badge: "Advanced" },
-      { name: "PostgreSQL", level: 80, badge: "Intermediate" },
-      { name: "SQL", level: 82, badge: "Advanced" },
-      { name: "Data Analysis", level: 78, badge: "Intermediate" },
+      { name: "MongoDB", level: 85 },
+      { name: "PostgreSQL", level: 80 },
+      { name: "SQL", level: 82 },
+      { name: "Data Analysis", level: 78 },
     ],
   },
   {
@@ -58,10 +58,10 @@ export const skillGroups = [
     color: "#ec4899",
     description: "Strong algorithmic thinking and problem-solving skills from competitive programming",
     skills: [
-      { name: "Data Structures", level: 95, badge: "Expert" },
-      { name: "Algorithms", level: 95, badge: "Expert" },
-      { name: "OOP", level: 85, badge: "Advanced" },
-      { name: "Problem Solving", level: 93, badge: "Advanced" },
+      { name: "Data Structures", level: 95 },
+      { name: "Algorithms", level: 95 },
+      { name: "OOP", level: 85 },
+      { name: "Problem Solving", level: 93 },
     ],
   },
   {
@@ -71,10 +71,10 @@ export const skillGroups = [
     color: "#06b6d4",
     description: "Development tools and platforms for efficient workflow",
     skills: [
-      { name: "Git & GitHub", level: 88, badge: "Advanced" },
-      { name: "Firebase", level: 80, badge: "Intermediate" },
-      { name: "Power BI", level: 78, badge: "Intermediate" },
-      { name: "Odoo ERP", level: 75, badge: "Intermediate" },
+      { name: "Git & GitHub", level: 88 },
+      { name: "Firebase", level: 80 },
+      { name: "Power BI", level: 78 },
+      { name: "Odoo ERP", level: 75 },
     ],
   },
 ];

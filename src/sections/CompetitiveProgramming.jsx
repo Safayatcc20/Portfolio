@@ -66,7 +66,7 @@ const contests = [
     team: "Honorable Mention",
     icon: "🎖️",
     year: "2023",
-    link: "#",
+    link: "https://icpc.global/private/person/857244/ICPCID",
   },
 ];
 
