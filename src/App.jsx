@@ -11,7 +11,6 @@ import { Education } from "@/sections/Education";
 import { Skills } from "@/sections/Skills";
 import { Reveal } from "@/components/Reveal";
 import { CompetitiveProgramming } from "@/sections/CompetitiveProgramming";
-import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -52,7 +51,6 @@ function App() {
       <Reveal>
         <Footer />
       </Reveal>
-      <Analytics />
     </div>
   );
 }
