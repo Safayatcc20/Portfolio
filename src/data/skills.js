@@ -1,80 +1,68 @@
 export const skillGroups = [
   {
+    id: "cp",
+    title: "Core",
+    icon: "🏆",
+    skills: [
+      { name: "Data Structures" },
+      { name: "Algorithms" },
+      { name: "Problem Solving" },
+      { name: "OOP" },
+    ],
+  },
+  {
     id: "languages",
     title: "Programming Languages",
     icon: "💻",
-    color: "#10b981",
-    description: "Strong foundation in multiple languages with competitive programming expertise",
     skills: [
-      { name: "C++", level: 95 },
-      { name: "JavaScript", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "C", level: 85 },
+      { name: "C++" },
+      { name: "C" },
+      { name: "Python" },
+      { name: "JavaScript" },
     ],
   },
+
   {
     id: "frontend",
     title: "Frontend Development",
     icon: "🎨",
-    color: "#3b82f6",
-    description: "Modern React-based development with responsive, performant UIs",
     skills: [
-      { name: "React", level: 90 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "HTML & CSS", level: 95 },
-      { name: "Responsive Design", level: 88 },
+      { name: "React.js" },
+      { name: "JavaScript" },
+      { name: "HTML5" },
+      { name: "Tailwind CSS" },
     ],
   },
+
   {
     id: "backend",
     title: "Backend Development",
     icon: "⚙️",
-    color: "#f59e0b",
-    description: "Full-stack capabilities with Node.js, Express, and database design",
     skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Express.js", level: 85 },
-      { name: "Flask", level: 80 },
-      { name: "RESTful APIs", level: 88 },
+      { name: "Node.js" },
+      { name: "Express.js" },
     ],
   },
+
   {
-    id: "databases",
-    title: "Databases & Data",
+    id: "database",
+    title: "Databases",
     icon: "🗄️",
-    color: "#8b5cf6",
-    description: "Experience with relational and NoSQL databases at scale",
     skills: [
-      { name: "MongoDB", level: 85 },
-      { name: "PostgreSQL", level: 80 },
-      { name: "SQL", level: 82 },
-      { name: "Data Analysis", level: 78 },
+      { name: "MongoDB" },
+      { name: "MySQL" },
     ],
   },
-  {
-    id: "core",
-    title: "Core Computer Science",
-    icon: "🧠",
-    color: "#ec4899",
-    description: "Strong algorithmic thinking and problem-solving skills from competitive programming",
-    skills: [
-      { name: "Data Structures", level: 95 },
-      { name: "Algorithms", level: 95 },
-      { name: "OOP", level: 85 },
-      { name: "Problem Solving", level: 93 },
-    ],
-  },
+
+
   {
     id: "tools",
     title: "Tools & Platforms",
     icon: "🛠️",
-    color: "#06b6d4",
-    description: "Development tools and platforms for efficient workflow",
     skills: [
-      { name: "Git & GitHub", level: 88 },
-      { name: "Firebase", level: 80 },
-      { name: "Power BI", level: 78 },
-      { name: "Odoo ERP", level: 75 },
+      { name: "Git" },
+      { name: "GitHub" },
+      { name: "VS Code" },
     ],
   },
 ];

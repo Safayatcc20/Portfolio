@@ -125,7 +125,7 @@ export const Hero = () => {
                 {resumeOpen && (
                   <div className="absolute left-0 top-full mt-3 w-52 rounded-2xl glass shadow-2xl overflow-hidden border border-border z-[99999]">
                     <a
-                      href="/Md.Safayat_Bin_Nasir_Resume.pdf"
+                      href="\Md.Safayat _Bin_Nasir_Resume.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setResumeOpen(false)}
@@ -135,7 +135,7 @@ export const Hero = () => {
                     </a>
 
                     <a
-                      href="/Md.Safayat_Bin_Nasir_Resume.pdf"
+                      href="\Md.Safayat _Bin_Nasir_Resume.pdf"
                       download="Md_Safayat_Bin_Nasir_Resume.pdf"
                       onClick={() => setResumeOpen(false)}
                       className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-all"

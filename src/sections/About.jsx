@@ -1,29 +1,29 @@
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import { Code2, Trophy, Database, Zap } from "lucide-react";
 
 const highlights = [
   {
+    icon: Trophy,
+    title: "Competitive Programmer",
+    description:
+      "Codeforces Specialist (1433). Solved 1500+ problems. Active ICPC participant.",
+  },
+  {
     icon: Code2,
-    title: "Problem Solving",
+    title: "Full-Stack Developer",
     description:
-      "Passionate about solving algorithmic and logical problems through competitive programming.",
+      "Built web apps using React, Node.js, Express, MongoDB, and PostgreSQL.",
   },
   {
-    icon: Rocket,
-    title: "Backend Development",
+    icon: Database,
+    title: "Strong Fundamentals",
     description:
-      "Interested in backend systems, databases, and building scalable applications.",
+      "Solid understanding of DSA, OOP, and database design through CP and projects.",
   },
   {
-    icon: Users,
-    title: "Continuous Learning",
+    icon: Zap,
+    title: "Problem Solver",
     description:
-      "Always exploring new technologies and improving my development skills.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Analytical Thinking",
-    description:
-      "Strong foundation in mathematics, algorithms, OOP, and data structures.",
+      "Strong analytical mindset focused on efficient and scalable solutions.",
   },
 ];
 
@@ -32,7 +32,8 @@ export const About = () => {
     <section id="about" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Column */}
+          
+          {/* Left Column - About Text */}
           <div className="space-y-8">
             <div className="animate-fade-in">
               <span className="text-secondary-foreground text-xl font-medium tracking-wider uppercase">
@@ -41,43 +42,43 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Solving problems through
+              Competitive Programmer & 
               <span className="font-serif italic font-normal text-white">
                 {" "}
-                technology and continuous learning.
+                Full-Stack Developer
               </span>
             </h2>
+
             <div className="space-y-4 text-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a final year CSE student at CUET with a strong passion for
-                problem solving, competitive programming, and backend
-                development. My journey in programming started with curiosity
-                and gradually developed into a deep interest in algorithms,
-                databases, and software engineering.
+                Final-year CSE student at CUET. Competitive programmer with
+                <strong> 1500+ solved problems</strong> and Codeforces Specialist
+                rating (1433).
               </p>
 
               <p>
-                I have experience working with C++, Java, SQL, MongoDB, and
-                modern web technologies. I enjoy building projects, exploring
-                new tools, and continuously improving my technical and
-                problem-solving skills.
+                Full-stack developer experienced in
+                <strong> React, Node.js, Express, MongoDB, and PostgreSQL</strong>.
+                Built multiple web applications and worked with real-world systems
+                during industrial exposure.
               </p>
 
               <p>
-                Beyond development, I actively practice competitive programming,
-                which has strengthened my analytical thinking, mathematical
-                skills, and ability to solve complex problems efficiently.
+                Strong foundation in algorithms, data structures, and system design,
+                developed through competitive programming and project work.
               </p>
             </div>
 
+            {/* CTA Quote - More Specific */}
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
-              <p className="text-lg font-medium italic text-foreground">
-                "Every project and problem I solve is another step toward
-                becoming a better engineer and lifelong learner."
+              <p className="text-lg font-medium text-foreground">
+                <span className="text-primary">Looking for:</span> Full-stack and Software Engineering roles 
+                where I can apply my problem-solving expertise and grow as an engineer.
               </p>
             </div>
           </div>
-          {/* Right Column - Hilights */}
+
+          {/* Right Column - Highlights */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, idx) => (
               <div
