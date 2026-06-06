@@ -27,7 +27,7 @@ const skills = [
 
 export const Hero = () => {
   const [resumeOpen, setResumeOpen] = useState(false);
-  const ref = useRef();
+  const ref = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -35,7 +35,6 @@ export const Hero = () => {
         setResumeOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
@@ -55,6 +54,7 @@ export const Hero = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(30)].map((_, i) => (
           <div
+            key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
               backgroundColor: "#20B2A6",
@@ -112,49 +112,33 @@ export const Hero = () => {
 
               {/* Resume Dropdown Wrapper */}
               <div className="relative z-50">
-                {/* Resume Button */}
-                <button
-                  onClick={() => setResumeOpen(!resumeOpen)}
-                  className="focus:outline-none"
+                {/* REMOVE OUTER BUTTON - Pass onClick to AnimatedBorderButton instead */}
+                <AnimatedBorderButton
+                  onClick={() => setResumeOpen(!resumeOpen)} // ✅ Click handler here
                 >
-                  <AnimatedBorderButton>
-                    <div className="flex items-center gap-2">
-                      <ChevronDown
-                        className="w-4 h-4 transition-transform duration-300
-            ${resumeOpen ? 'rotate-180' : ''}"
-                      />
-                      Resume
-                    </div>
-                  </AnimatedBorderButton>
-                </button>
+                  <div className="flex items-center gap-2">
+                    <ChevronDown className="w-4 h-4 transition-transform duration-300 ${resumeOpen ? 'rotate-180' : ''}" />
+                    Resume
+                  </div>
+                </AnimatedBorderButton>
 
-                {/* Dropdown */}
                 {resumeOpen && (
-                  <div
-                    className="absolute left-0 top-full mt-3 w-52
-           rounded-2xl glass shadow-2xl
-           overflow-hidden border border-border
-           z-[99999]"
-                  >
-                    {/* View */}
+                  <div className="absolute left-0 top-full mt-3 w-52 rounded-2xl glass shadow-2xl overflow-hidden border border-border z-[99999]">
                     <a
                       href="/Md.Safayat_Bin_Nasir_Resume.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setResumeOpen(false)}
-                      className="flex items-center gap-3 px-4 py-3
-                     hover:bg-primary/10 transition-all"
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-all"
                     >
                       👁 View Resume
                     </a>
 
-                    {/* Download */}
                     <a
                       href="/Md.Safayat_Bin_Nasir_Resume.pdf"
                       download="Md_Safayat_Bin_Nasir_Resume.pdf"
                       onClick={() => setResumeOpen(false)}
-                      className="flex items-center gap-3 px-4 py-3
-                     hover:bg-primary/10 transition-all"
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-all"
                     >
                       ⬇ Download Resume
                     </a>
@@ -197,7 +181,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="\safayats.jpeg"
+                  src="/safayats.jpeg"
                   alt="Md.Safayat Bin Nasir"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
@@ -238,7 +222,7 @@ export const Hero = () => {
             />
             <div className="flex animate-marquee">
               {[...skills, ...skills].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                <div key={`skill-${idx}`} className="flex-shrink-0 px-8 py-4">
                   <span className="text-xl font-semibold text-foreground hover:text-highlight transition-colors">
                     {skill}
                   </span>
