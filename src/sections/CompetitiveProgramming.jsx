@@ -56,7 +56,7 @@ const contests = [
     name: "PUC IUPC 2024",
     rank: "24th",
     team: "Inter-University Contest",
-    icon: "🥇",
+    icon: "🎖️",
     year: "2024",
     link: "#",
   },
@@ -75,7 +75,7 @@ const icpcJourney = [
     year: "2025-2026",
     name: "ICPC Asia Dhaka Regional Preliminary",
     team: "CUET_HSN",
-    status: "🔄 Participating",
+    status: "✅ Participated",
     link: "#",
   },
   {

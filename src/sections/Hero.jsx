@@ -80,7 +80,7 @@ export const Hero = () => {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-3xl md:text-3xl lg:text-3xl font-bold leading-tight animate-fade-in animation-delay-100">
-                CSE Student | MERN Stack Developer{" "}
+                CSE Graduate | MERN Stack Developer{" "}
                 <span className="text-primary glow-text">
                   | Competitive Programmer
                 </span>
@@ -95,9 +95,7 @@ export const Hero = () => {
                 while solving algorithmic problems through competitive
                 programming.
                 <br />
-                <br />I enjoy working with algorithms, databases, OOP, and
-                modern web technologies while continuously learning and building
-                new projects.
+                <br />Passionate about backend development, scalable systems, and clean software design. I enjoy applying algorithms, data structures, and database concepts to build practical software solutions.
               </p>
             </div>
             {/* CTAs */}
