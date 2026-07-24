@@ -3,6 +3,7 @@ const educationData = [
     degree: "B.Sc. in Computer Science & Engineering",
     institute: "Chittagong University of Engineering & Technology (CUET)",
     duration: "2022 - 2026",
+    cgpa:"3.59/4.00",
     description:
       "Focused on software engineering, data structures, algorithms, and web development. Actively involved in competitive programming and full-stack projects.",
   },
@@ -45,40 +46,96 @@ export const Education = () => {
           </h2>
 
           <p className="text-muted-foreground">
-            My academic journey that shaped my technical foundation and problem-solving skills.
+            Academic journey shaped by learning and growth.
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="max-w-4xl mx-auto space-y-8">
-          {educationData.map((item, index) => (
-            <div
-              key={index}
-              className="glass rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-[1.02]"
-            >
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                
+        {/* Education Grid */}
+        <div className="max-w-6xl mx-auto">
+          {/* Current/Main Education */}
+          <div className="mb-12">
+            <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-6">
+              Current Education
+            </h3>
+            <div className="glass rounded-2xl p-8 border border-primary/30 hover:border-primary/50 
+            transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 bg-gradient-to-br from-primary/5 to-transparent">
+              <div className="grid md:grid-cols-3 gap-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-white">
-                    {item.degree}
-                  </h3>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Degree</p>
+                  <h4 className="text-lg font-semibold text-white">
+                    {educationData[0].degree}
+                  </h4>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Institute</p>
+                  <p className="text-lg font-semibold text-primary">
+                    {educationData[0].institute}
+                  </p>
+                </div>
+                <div className="flex gap-6">
+                  <div>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Duration</p>
+                    <p className="text-lg font-semibold">
+                      {educationData[0].duration}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">CGPA</p>
+                    <p className="text-lg font-bold text-primary">
+                      {educationData[0].cgpa}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p className="text-muted-foreground mt-6">
+                {educationData[0].description}
+              </p>
+              {educationData[0].achievements && (
+                <div className="mt-6 pt-6 border-t border-white/10">
+                  <p className="text-xs font-bold text-primary uppercase tracking-wider mb-4">
+                    Achievements
+                  </p>
+                  <ul className="space-y-2">
+                    {educationData[0].achievements.map((achievement, idx) => (
+                      <li key={idx} className="text-sm text-muted-foreground flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
 
-                  <p className="text-primary font-medium">
+          {/* Previous Education */}
+          <div>
+            <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-6">
+              Previous Education
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              {educationData.slice(1).map((item, index) => (
+                <div
+                  key={index}
+                  className="glass rounded-2xl p-6 border border-primary/20 hover:border-primary/40 
+                  transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+                >
+                  <h4 className="text-lg font-semibold text-white mb-2">
+                    {item.degree}
+                  </h4>
+                  <p className="text-primary font-medium mb-1">
                     {item.institute}
                   </p>
-
-                  <p className="text-muted-foreground text-sm mt-2">
+                  <p className="text-xs text-muted-foreground mb-3">
+                    {item.duration}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
                     {item.description}
                   </p>
                 </div>
-
-                <div className="text-sm text-muted-foreground md:text-right whitespace-nowrap">
-                  📅 {item.duration}
-                </div>
-
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
